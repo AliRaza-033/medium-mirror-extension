@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Medium Mirror Opener",
+  "version": "1.3.0",
+  "description": "Open the current Medium article on a mirror base URL with one click.",
+  "permissions": ["storage", "tabs", "activeTab", "scripting"],
+
+  "action": {
+    "default_title": "Open in Mirror",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "commands": {
+    "open-mirror": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+M",
+        "mac": "Command+Shift+M"
+      },
+      "description": "Open current page in mirror"
+    }
+  }
+}
